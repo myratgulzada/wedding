@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мурат & Гульзада - Приглашение на свадьбу</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Приглашение на свадьбу Мурата и Гульзады. Разделите с нами радость этого торжества 11 Октября 2026 года!">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Control Bar -->
+  <div class="floating-control-bar">
+    <button id="btn-reopen-envelope" class="btn-float-icon" title="Вернуться к конверту">
+      <i class="fa-solid fa-envelope"></i>
+    </button>
+    <button id="btn-float-music" class="btn-float-icon" title="Музыка">
+      <i class="fa-solid fa-music"></i>
+    </button>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="wedding-audio" loop preload="auto"></audio>
+
+  <!-- ==========================================================================
+       1. ENVELOPE SCREEN (INTRO OVERLAY)
+       ========================================================================== -->
+  <div id="envelope-wrapper" class="envelope-wrapper">
+    <div class="envelope-card">
+      <div id="envelope-flap" class="envelope-flap"></div>
+      
+      <div class="envelope-content">
+        <div class="envelope-names">
+          Мурат
+          <span class="envelope-ampersand">&</span>
+          Гульзада
+        </div>
+        <div class="envelope-date">11 . 10 . 2026</div>
+      </div>
+      
+      <button id="wax-seal-btn" class="wax-seal-btn" title="Нажмите, чтобы открыть">
+        М&Г
+      </button>
+
+      <div class="envelope-hint">Нажмите на печать, чтобы открыть</div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN APP CONTAINER (Mobile portrait view card)
+       ========================================================================== -->
+  <div class="app-viewport">
+    <main class="invitation-container">
+      
+      <!-- ==========================================================================
+           2. HEADER & QUOTE SECTION (Milk Beige)
+           ========================================================================== -->
+      <section class="section-milk invitation-header text-center">
+        <!-- Botanical floral accent banner -->
+        <img src="images/floral.jpg" alt="Декор" class="floral-accent-img">
+
+        <!-- Quote -->
+        <div class="quote-box">
+          «Любовь долготерпит, милосердствует, любовь не завидует... Все покрывает, всему верит, всего надеется, все переносит.»
+          <span class="quote-author">1 Коринфянам 13:4-7</span>
+        </div>
+
+        <!-- Monogram Logo -->
+        <div class="monogram-logo font-serif">
+          <span>М</span>
+          <div class="monogram-divider"></div>
+          <span>Г</span>
+        </div>
+
+        <div class="main-title">МЫ ЖЕНИМСЯ!</div>
+
+        <!-- Couple Hero Photo -->
+        <div class="hero-photo-wrapper">
+          <img src="images/hero.jpg" alt="Мурат и Гульзада">
+        </div>
+
+        <!-- Floral Accent Bottom -->
+        <img src="images/floral.jpg" alt="Декор" class="floral-accent-img" style="transform: rotate(180deg);">
+      </section>
+
+      <!-- ==========================================================================
+           3. MUSIC PLAYER & BLESSING SECTION (Dark Khaki)
+           ========================================================================== -->
+      <section class="section-khaki text-center">
+        <div class="music-player-card">
+          <div class="music-title">Включите нашу песню</div>
+          <div class="player-controls">
+            <button class="player-icon-small" title="Назад"><i class="fa-solid fa-backward-step"></i></button>
+            <button id="btn-play-pause" class="btn-player-main" title="Воспроизвести / Пауза">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <button class="player-icon-small" title="Вперед"><i class="fa-solid fa-forward-step"></i></button>
+          </div>
+        </div>
+
+        <!-- Blessing & Parents -->
+        <div class="parents-blessing-box">
+          <p class="blessing-intro">
+            С любовью, которая нас объединяет, благословением родных и поддержкой наших дорогих родителей:
+          </p>
+
+          <div class="parents-group">
+            <div class="parents-names">
+              Семья Жениха<br>
+              Родители Мурата
+            </div>
+            <span class="ampersand-accent">&</span>
+            <div class="parents-names">
+              Семья Невесты<br>
+              Родители Гульзады
+            </div>
+          </div>
+
+          <p class="marriage-statement">
+            Мы соединим наши сердца и судьбы в этот особенный день!
+          </p>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           4. DATE & LIVE COUNTDOWN SECTION (Dark Khaki Header / Card)
+           ========================================================================== -->
+      <section class="section-khaki text-center" style="border-top: 1px solid rgba(197, 164, 109, 0.3);">
+        <div class="date-header-badge font-sans">
+          <span>ВОСКРЕСЕНЬЕ</span>
+          <span class="date-day-large">11</span>
+          <span>ОКТЯБРЯ 2026</span>
+        </div>
+
+        <div class="countdown-title">ДО СВАДЬБЫ ОСТАЛОСЬ</div>
+
+        <div class="countdown-grid">
+          <div class="countdown-box">
+            <div id="count-days" class="countdown-number">00</div>
+            <div class="countdown-label">Дней</div>
+          </div>
+          <span class="countdown-colon">:</span>
+          <div class="countdown-box">
+            <div id="count-hours" class="countdown-number">00</div>
+            <div class="countdown-label">Часов</div>
+          </div>
+          <span class="countdown-colon">:</span>
+          <div class="countdown-box">
+            <div id="count-mins" class="countdown-number">00</div>
+            <div class="countdown-label">Минут</div>
+          </div>
+          <span class="countdown-colon">:</span>
+          <div class="countdown-box">
+            <div id="count-secs" class="countdown-number">00</div>
+            <div class="countdown-label">Секунд</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           5. RECEPTION & LOCATION SECTION (Milk Beige)
+           ========================================================================== -->
+      <section class="section-milk text-center">
+        <!-- Reception Photo -->
+        <div class="hero-photo-wrapper" style="height: 360px; margin-bottom: 25px;">
+          <img src="images/reception.jpg" alt="Свадебный банкет">
+        </div>
+
+        <div class="reception-icon-wrapper">
+          <i class="fa-solid fa-ring"></i>
+        </div>
+
+        <div class="reception-time">17:00</div>
+        <div class="reception-subtitle">ТОРЖЕСТВЕННЫЙ БАНКЕТ</div>
+        <div class="reception-venue">БАНКЕТНЫЙ ЗАЛ</div>
+        <div class="reception-city">Место проведения торжества</div>
+
+        <button id="btn-open-location" class="btn-action-khaki">
+          <i class="fa-solid fa-location-dot" style="margin-right: 6px;"></i> Посмотреть локацию
+        </button>
+      </section>
+
+      <!-- ==========================================================================
+           6. ITINERARY OF ACTIVITIES (TIMELINE) (Milk Beige)
+           ========================================================================== -->
+      <section class="section-milk text-center" style="border-top: 1px solid var(--bg-milk-beige-darker);">
+        <h2 class="section-title">ПРОГРАММА ДНЯ</h2>
+
+        <div class="timeline">
+          <!-- Item 1: Ceremonia -->
+          <div class="timeline-item">
+            <div class="timeline-icon-box"><i class="fa-solid fa-church"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-time">14:30</div>
+              <div class="timeline-event">ЦЕРЕМОНИЯ</div>
+            </div>
+          </div>
+
+          <!-- Item 2: Recepción -->
+          <div class="timeline-item">
+            <div class="timeline-icon-box"><i class="fa-solid fa-champagne-glasses"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-time">16:30</div>
+              <div class="timeline-event">СБОР ГОСТЕЙ</div>
+            </div>
+          </div>
+
+          <!-- Item 3: Brindis -->
+          <div class="timeline-item">
+            <div class="timeline-icon-box"><i class="fa-solid fa-wine-glass"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-time">17:30</div>
+              <div class="timeline-event">СВАДЕБНЫЙ ТОСТ</div>
+            </div>
+          </div>
+
+          <!-- Item 4: Banquete -->
+          <div class="timeline-item">
+            <div class="timeline-icon-box"><i class="fa-solid fa-utensils"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-time">19:00</div>
+              <div class="timeline-event">УЖИН</div>
+            </div>
+          </div>
+
+          <!-- Item 5: Fiesta -->
+          <div class="timeline-item">
+            <div class="timeline-icon-box"><i class="fa-solid fa-music"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-time">19:30</div>
+              <div class="timeline-event">ТАНЦЫ & ШОУ</div>
+            </div>
+          </div>
+
+          <!-- Item 6: Hora Loca -->
+          <div class="timeline-item">
+            <div class="timeline-icon-box"><i class="fa-solid fa-masks-theater"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-time">21:00</div>
+              <div class="timeline-event">ШОУ-ПРОГРАММА</div>
+            </div>
+          </div>
+
+          <!-- Item 7: Fin -->
+          <div class="timeline-item">
+            <div class="timeline-icon-box"><i class="fa-solid fa-clock"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-time">02:00</div>
+              <div class="timeline-event">ЗАВЕРШЕНИЕ</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           7. DRESS CODE SECTION (Milk Beige)
+           ========================================================================== -->
+      <section class="section-milk text-center" style="border-top: 1px solid var(--bg-milk-beige-darker);">
+        <div class="dress-code-box">
+          <h2 class="section-title">ДРЕСС-КОД</h2>
+
+          <div class="dress-icons">
+            <i class="fa-solid fa-user-tie"></i>
+            <i class="fa-solid fa-person-dress"></i>
+          </div>
+
+          <div class="dress-title">Вечерний / Formal</div>
+          <p class="dress-note">
+            Будем признательны, если при выборе нарядов вы удержитесь от белого цвета.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           8. GIFT SUGGESTIONS SECTION (Milk Beige)
+           ========================================================================== -->
+      <section class="section-milk text-center" style="border-top: 1px solid var(--bg-milk-beige-darker);">
+        <div class="card-content-block">
+          <div class="icon-badge"><i class="fa-solid fa-gift"></i></div>
+          <h3 class="block-title">ПОЖЕЛАНИЯ К ПОДАРКАМ</h3>
+          <p class="block-text">
+            Главный подарок для нас — ваше присутствие! Если вы хотите подарить нам ценность в конверте, мы будем искренне благодарны.
+          </p>
+          <div style="font-weight: bold; color: var(--accent-gold); letter-spacing: 1px; margin-bottom: 12px;">
+            <i class="fa-solid fa-envelope-open-text" style="margin-right: 6px;"></i> ПОДАРКИ В КОНВЕРТАХ
+          </div>
+          <button id="btn-open-gifts" class="btn-action-khaki" style="font-size: 0.75rem; padding: 8px 20px;">
+            Реквизиты и детали
+          </button>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           9. ACCOMMODATION SECTION (Milk Beige)
+           ========================================================================== -->
+      <section class="section-milk text-center" style="border-top: 1px solid var(--bg-milk-beige-darker);">
+        <div class="card-content-block">
+          <div class="icon-badge"><i class="fa-solid fa-hotel"></i></div>
+          <h3 class="block-title">ПРОЖИВАНИЕ ДЛЯ ГОСТЕЙ</h3>
+
+          <div style="margin-bottom: 15px;">
+            <strong style="color: var(--text-dark); display: block;">Отель "Регина Резорт"</strong>
+            <a href="#" class="hotel-link">Подробнее</a>
+          </div>
+
+          <div>
+            <strong style="color: var(--text-dark); display: block;">Гостевой Комплекс "Вилла Альсина"</strong>
+            <a href="#" class="hotel-link">Подробнее</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           10. RSVP CONFIRMATION SECTION (Dark Khaki)
+           ========================================================================== -->
+      <section class="section-khaki rsvp-section text-center">
+        <div class="icon-badge" style="color: var(--accent-gold-light);"><i class="fa-solid fa-calendar-check"></i></div>
+        <h2 class="section-title light-text">ПОДТВЕРЖДЕНИЕ ПРИСУТСТВИЯ</h2>
+        <p class="rsvp-note">
+          Пожалуйста, подтвердите ваше присутствие до 15 сентября 2026 года
+        </p>
+
+        <button id="btn-open-rsvp" class="btn-rsvp">
+          Подтвердить присутствие
+        </button>
+      </section>
+
+      <!-- ==========================================================================
+           11. FOOTER & ENDING PHOTO (Milk Beige)
+           ========================================================================== -->
+      <section class="section-milk footer-section text-center">
+        <p style="letter-spacing: 2px; font-size: 0.8rem; color: var(--text-dark-muted); text-transform: uppercase;">
+          С НЕТЕРПЕНИЕМ ЖДЕМ ВСТРЕЧИ С ВАМИ!
+        </p>
+        <div class="footer-thanks">С любовью, Мурат и Гульзада!</div>
+
+        <!-- Footer Couple Photo -->
+        <div class="footer-photo-wrapper">
+          <img src="images/bridge.jpg" alt="Мурат и Гульзада">
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 1: LOCATION & MAP MODAL
+       ========================================================================== -->
+  <div id="modal-location" class="modal-backdrop">
+    <div class="modal-box">
+      <button id="close-modal-location" class="modal-close-btn">&times;</button>
+      <h3 class="modal-title">Локация Торжества</h3>
+      <p style="text-align: center; color: var(--text-dark-muted); font-size: 0.9rem;">
+        <strong>Банкетный Зал</strong><br>
+        Адрес проведения свадебного банкета
+      </p>
+
+      <div class="map-iframe-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60790.31682855146!2d-63.208154!3d-17.783327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e812d1b61921%3A0xb36c04f5e0cf7925!2sSanta%20Cruz%20de%20la%20Sierra%2C%20Bolivia!5e0!3m2!1ses!2s!4v1700000000000!5m2!1ses!2s" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="#" id="btn-go-maps" class="btn-action-khaki" style="display: block;">
+          Открыть в Google Maps
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: GIFTS & BANK DETAILS MODAL
+       ========================================================================== -->
+  <div id="modal-gifts" class="modal-backdrop">
+    <div class="modal-box">
+      <button id="close-modal-gifts" class="modal-close-btn">&times;</button>
+      <h3 class="modal-title">Детали к подаркам</h3>
+      <p style="text-align: center; color: var(--text-dark-muted); font-size: 0.9rem; margin-bottom: 15px;">
+        На торжестве будет подготовлен красивый сундучок для <strong>конвертов</strong>. Если вам удобнее сделать перевод:
+      </p>
+
+      <div style="background: var(--bg-milk-beige); padding: 15px; border-radius: 8px; font-size: 0.85rem; line-height: 1.6;">
+        <p><strong>Банк:</strong> Название Банка</p>
+        <p><strong>Номер карты / счета:</strong> 0000 0000 0000 0000</p>
+        <p><strong>Получатель:</strong> Мурат / Гульзада</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 3: RSVP FORM MODAL
+       ========================================================================== -->
+  <div id="modal-rsvp" class="modal-backdrop">
+    <div class="modal-box">
+      <button id="close-modal-rsvp" class="modal-close-btn">&times;</button>
+      <h3 class="modal-title">Подтвердить присутствие</h3>
+      
+      <form id="rsvp-form">
+        <div class="form-group">
+          <label for="guest-name">Ваше Имя и Фамилия *</label>
+          <input type="text" id="guest-name" class="form-control" placeholder="Например: Аскаров Арман" required>
+        </div>
+
+        <div class="form-group">
+          <label>Сможете ли вы прийти? *</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="attendance" value="Да, с удовольствием!" checked> Да, с удовольствием!
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="attendance" value="К сожалению, не смогу"> Не смогу прийти
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="guest-count">Количество гостей с вами</label>
+          <select id="guest-count" class="form-control">
+            <option value="1">1 человек (только я)</option>
+            <option value="2">2 человека</option>
+            <option value="3">3 человека</option>
+            <option value="4+">4 или более</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="guest-message">Пожелайние или комментарий (Опционально)</label>
+          <textarea id="guest-message" class="form-control" rows="3" placeholder="Ваши тёплые пожелания..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-action-khaki" style="width: 100%; border: none; margin-top: 10px;">
+          Отправить подтверждение
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
