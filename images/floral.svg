@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <!-- Elegant Botanical Floral Banner (100% Transparent SVG) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- Central Curved Vine -->
+    <path d="M 50,70 Q 150,20 300,45 Q 450,20 550,70" stroke="#7C8B67" stroke-width="1.8" opacity="0.85"/>
+    <path d="M 80,60 Q 200,30 300,50 Q 400,30 520,60" stroke="#C5A46D" stroke-width="1.2" opacity="0.75"/>
+    
+    <!-- Left Leaves Branch -->
+    <g fill="#4A5237" opacity="0.8">
+      <path d="M 100,58 C 90,45 110,40 100,58 Z" />
+      <path d="M 120,48 C 115,32 135,35 120,48 Z" fill="#7C8B67" />
+      <path d="M 145,40 C 135,25 155,28 145,40 Z" />
+      <path d="M 175,35 C 170,18 190,24 175,35 Z" fill="#575E47" />
+      <path d="M 210,36 C 205,20 225,25 210,36 Z" />
+      <path d="M 245,40 C 240,24 260,30 245,40 Z" fill="#7C8B67" />
+    </g>
+
+    <!-- Right Leaves Branch -->
+    <g fill="#4A5237" opacity="0.8">
+      <path d="M 500,58 C 510,45 490,40 500,58 Z" />
+      <path d="M 480,48 C 485,32 465,35 480,48 Z" fill="#7C8B67" />
+      <path d="M 455,40 C 465,25 445,28 455,40 Z" />
+      <path d="M 425,35 C 430,18 410,24 425,35 Z" fill="#575E47" />
+      <path d="M 390,36 C 395,20 375,25 390,36 Z" />
+      <path d="M 355,40 C 360,24 340,30 355,40 Z" fill="#7C8B67" />
+    </g>
+
+    <!-- Center Blossom & Rose Elements -->
+    <!-- Central Main Flower -->
+    <g transform="translate(300, 48)">
+      <!-- Outer Petals -->
+      <circle cx="0" cy="0" r="16" fill="#E8D7B8" opacity="0.9" />
+      <circle cx="-10" cy="-6" r="11" fill="#C5A46D" opacity="0.75" />
+      <circle cx="10" cy="-6" r="11" fill="#C5A46D" opacity="0.75" />
+      <circle cx="-8" cy="8" r="11" fill="#B2915B" opacity="0.7" />
+      <circle cx="8" cy="8" r="11" fill="#B2915B" opacity="0.7" />
+      <circle cx="0" cy="-12" r="10" fill="#D4AF37" opacity="0.8" />
+      <!-- Center Stamen -->
+      <circle cx="0" cy="0" r="6" fill="#383E2C" />
+      <circle cx="0" cy="0" r="3" fill="#C5A46D" />
+    </g>
+
+    <!-- Side Flowers Left -->
+    <g transform="translate(220, 42)">
+      <circle cx="0" cy="0" r="11" fill="#C5A46D" opacity="0.85" />
+      <circle cx="-6" cy="-4" r="7" fill="#E8D7B8" opacity="0.8" />
+      <circle cx="6" cy="-4" r="7" fill="#E8D7B8" opacity="0.8" />
+      <circle cx="0" cy="0" r="4" fill="#383E2C" />
+    </g>
+
+    <g transform="translate(150, 48)">
+      <circle cx="0" cy="0" r="9" fill="#D4AF37" opacity="0.8" />
+      <circle cx="0" cy="0" r="3" fill="#4A5237" />
+    </g>
+
+    <!-- Side Flowers Right -->
+    <g transform="translate(380, 42)">
+      <circle cx="0" cy="0" r="11" fill="#C5A46D" opacity="0.85" />
+      <circle cx="-6" cy="-4" r="7" fill="#E8D7B8" opacity="0.8" />
+      <circle cx="6" cy="-4" r="7" fill="#E8D7B8" opacity="0.8" />
+      <circle cx="0" cy="0" r="4" fill="#383E2C" />
+    </g>
+
+    <g transform="translate(450, 48)">
+      <circle cx="0" cy="0" r="9" fill="#D4AF37" opacity="0.8" />
+      <circle cx="0" cy="0" r="3" fill="#4A5237" />
+    </g>
+
+    <!-- Gold Berries & Accent Dots -->
+    <g fill="#D4AF37">
+      <circle cx="110" cy="42" r="3" />
+      <circle cx="118" cy="38" r="2" />
+      <circle cx="185" cy="30" r="3.5" />
+      <circle cx="194" cy="27" r="2.5" />
+      <circle cx="270" cy="32" r="3" />
+      <circle cx="330" cy="32" r="3" />
+      <circle cx="406" cy="27" r="2.5" />
+      <circle cx="415" cy="30" r="3.5" />
+      <circle cx="482" cy="38" r="2" />
+      <circle cx="490" cy="42" r="3" />
+    </g>
+  </g>
+</svg>

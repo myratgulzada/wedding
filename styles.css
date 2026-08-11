@@ -246,14 +246,13 @@ body {
   position: relative;
 }
 
-/* FLORAL BLENDING FIX - REMOVE WHITE BACKGROUND */
+/* FLORAL ACCENT BANNER (SVG TRANSPARENT) */
 .floral-accent-img {
   width: 85%;
-  max-width: 300px;
+  max-width: 320px;
+  height: auto;
   display: block;
   margin: 0 auto 20px auto;
-  mix-blend-mode: multiply;
-  filter: contrast(1.15) brightness(1.02);
   opacity: 0.95;
   background: transparent;
 }
