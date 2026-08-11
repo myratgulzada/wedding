@@ -5,10 +5,10 @@
 // CONFIGURATION VARIABLES (Easy for user to customize)
 const CONFIG = {
   // Target Event Date for Countdown: Year, Month (0-indexed: 9 = Oct), Day, Hour, Min
-  eventDate: new Date(2026, 9, 11, 17, 0, 0),
+  eventDate: new Date(2026, 9, 11, 18, 0, 0),
   
   // Google Maps link for Venue
-  googleMapsUrl: "https://maps.google.com/?q=Ресторан+Свадебный",
+  googleMapsUrl: "https://maps.app.goo.gl/EGWA563mdZ9zKLfy8?g_st=atm",
   
   // Music File Path (Replace with your MP3 path e.g. "music/song.mp3")
   audioUrl: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-wedding-acoustic-guitar-113540.mp3"
@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initEnvelope();
   initMusicPlayer();
   initCountdown();
-  initModals();
 });
 
 /* ==========================================================================
@@ -150,94 +149,4 @@ function initCountdown() {
 
   update();
   setInterval(update, 1000);
-}
-
-/* ==========================================================================
-   MODAL DIALOG HANDLERS
-   ========================================================================== */
-
-function initModals() {
-  // Location Modal
-  const btnLocation = document.getElementById('btn-open-location');
-  const modalLocation = document.getElementById('modal-location');
-  const closeLocation = document.getElementById('close-modal-location');
-  const btnGoMaps = document.getElementById('btn-go-maps');
-
-  if (btnLocation && modalLocation) {
-    btnLocation.addEventListener('click', () => modalLocation.classList.add('active'));
-  }
-  if (closeLocation && modalLocation) {
-    closeLocation.addEventListener('click', () => modalLocation.classList.remove('active'));
-  }
-  if (btnGoMaps) {
-    btnGoMaps.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.open(CONFIG.googleMapsUrl, '_blank');
-    });
-  }
-
-  // Gifts Modal
-  const btnGifts = document.getElementById('btn-open-gifts');
-  const modalGifts = document.getElementById('modal-gifts');
-  const closeGifts = document.getElementById('close-modal-gifts');
-
-  if (btnGifts && modalGifts) {
-    btnGifts.addEventListener('click', () => modalGifts.classList.add('active'));
-  }
-  if (closeGifts && modalGifts) {
-    closeGifts.addEventListener('click', () => modalGifts.classList.remove('active'));
-  }
-
-  // RSVP Modal
-  const btnRsvp = document.getElementById('btn-open-rsvp');
-  const modalRsvp = document.getElementById('modal-rsvp');
-  const closeRsvp = document.getElementById('close-modal-rsvp');
-  const rsvpForm = document.getElementById('rsvp-form');
-
-  if (btnRsvp && modalRsvp) {
-    btnRsvp.addEventListener('click', () => modalRsvp.classList.add('active'));
-  }
-  if (closeRsvp && modalRsvp) {
-    closeRsvp.addEventListener('click', () => modalRsvp.classList.remove('active'));
-  }
-
-  // RSVP Form submission logic
-  if (rsvpForm) {
-    rsvpForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const guestName = document.getElementById('guest-name').value;
-      const attendance = document.querySelector('input[name="attendance"]:checked')?.value || 'Sí';
-      const guestCount = document.getElementById('guest-count').value;
-      const guestMessage = document.getElementById('guest-message').value;
-
-      const rsvpData = {
-        name: guestName,
-        attendance: attendance,
-        count: guestCount,
-        message: guestMessage,
-        date: new Date().toISOString()
-      };
-
-      // Save locally
-      const savedList = JSON.parse(localStorage.getItem('wedding_rsvp_list') || '[]');
-      savedList.push(rsvpData);
-      localStorage.setItem('wedding_rsvp_list', JSON.stringify(savedList));
-
-      // Show confirmation alert / modal feedback
-      alert(`¡Gracias ${guestName}! Ваше подтверждение принято.`);
-      
-      rsvpForm.reset();
-      modalRsvp.classList.remove('active');
-    });
-  }
-
-  // Close modals when clicking backdrop outside modal box
-  document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
-    backdrop.addEventListener('click', (e) => {
-      if (e.target === backdrop) {
-        backdrop.classList.remove('active');
-      }
-    });
-  });
 }
